@@ -6,7 +6,7 @@ import Video from 'react-native-video';
 const VideoPlayer = () => {
     
     // The video we will play on the player. https://media.w3.org/2010/05/sintel/trailer_hd.mp4
-    const video = require("../Components/videos/video1.mp4");
+    const video = require("./videos/video1.mp4");
     
     const videoPlayer = useRef(null);
     const [duration, setDuration] = useState(0);
