@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import Button from "./Button";
 
 import "./AddTask.css";
+//import { CgPlayListAdd } from "react-icons/cg";
+
+export var lista="estou aqui";
 
 const AddTask = ({ handleTaskAddition }) => {
 	const [inputData, setInputData] = useState("");
@@ -14,6 +17,8 @@ const AddTask = ({ handleTaskAddition }) => {
 	const handleAddTaskClick = () => {
 		handleTaskAddition(inputData);
 		setInputData("");
+
+		//console.log("MainTask: "+ lista);
 	};
 	
 	const [selectedFile, setSelectedFile] = useState(null)
@@ -43,6 +48,8 @@ const AddTask = ({ handleTaskAddition }) => {
 			console.log(files[0])
 			console.log(files[0].name)
 			setInputData(escape(files[0].name))
+			lista = files[0].name;
+			console.log("AddTask: "+ lista);
 		}
 	}
 

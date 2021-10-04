@@ -8,10 +8,12 @@ import ReactPlayer from 'react-player'
 
 import Header from './components/Header';
 import Tasks from './components/Tasks';
-import AddTask from './components/AddTask';
+import AddTask, { lista } from './components/AddTask';
 import TaskDetails from './components/TaskDetails';
 
 import './App.css';
+import Button from './components/Button';
+var listaMain = "Lista Main";
 
 const App = () => {
 	const [tasks, setTasks] = useState([]);
@@ -27,14 +29,14 @@ const App = () => {
 
 		fetchTasks();
 	}, []);
-
+  
 	const handleTaskClick = (taskId) => {
 		const newTasks = tasks.map((task) => {
-			if (task.id === taskId) return { ...task, completed: !task.completed };
-
-			return task;
+			if (task.id === taskId) 
+        return { ...task, completed: !task.completed};
+      else
+			  return task;
 		});
-
 		setTasks(newTasks);
 	};
 
@@ -58,8 +60,6 @@ const App = () => {
 	};
 
 
-  const lista = [];
-
   const [selectedFile, setSelectedFile] = useState(null)
   const onChangeHandler = event => {
       const { files } = event.target
@@ -81,6 +81,10 @@ const App = () => {
             exact
             render={()=>(
               <>
+                <ReactPlayer
+                    width='98%' height='70%' url={selectedFile} controls
+                    volume={10/100}
+                />
                 <AddTask handleTaskAddition={handleTaskAddition} />
                 <Tasks
                   tasks={tasks}
