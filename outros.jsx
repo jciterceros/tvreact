@@ -112,4 +112,17 @@ const styles = StyleSheet.create({
   const message = "Hello world";
   const videoURL = "http://localhost:3000/videos/Parcialmente Nublado _ Partly Cloudy - Parte 1.mp4";
   const URL = "https://media.w3.org/2010/05/sintel/trailer_hd.mp4"; 
+
+
+
+
+var lista={}
+
+lista={id:0,nome:'video0.mp4',tempo:30}
+
+lista.concat({id:2,nome:'video2.mp4',tempo:10})
+
+
+
+
 */
