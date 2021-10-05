@@ -5,7 +5,7 @@ import Button from "./Button";
 import "./AddTask.css";
 //import { CgPlayListAdd } from "react-icons/cg";
 
-export var lista="estou aqui";
+export var lista={};
 
 const AddTask = ({ handleTaskAddition }) => {
 	const [inputData, setInputData] = useState("");
@@ -16,9 +16,10 @@ const AddTask = ({ handleTaskAddition }) => {
 
 	const handleAddTaskClick = () => {
 		handleTaskAddition(inputData);
+		lista+={inputData:"30"};
 		setInputData("");
-
 		//console.log("MainTask: "+ lista);
+		console.log("Lista: "+lista);
 	};
 	
 	const [selectedFile, setSelectedFile] = useState(null)
