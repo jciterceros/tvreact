@@ -5,7 +5,7 @@ import Button from "./Button";
 import "./AddTask.css";
 //import { CgPlayListAdd } from "react-icons/cg";
 
-export var lista=[];
+export var lista={};
 
 
 const AddTask = ({ handleTaskAddition }) => {
@@ -17,10 +17,11 @@ const AddTask = ({ handleTaskAddition }) => {
 
 	const handleAddTaskClick = () => {
 		handleTaskAddition(inputData);
-		lista=lista.concat({id:0,nome:'video0.mp4',tempo:60})
+		lista.concat({id:2,nome:'video2.mp4',tempo:10})
 		setInputData("");
 		//console.log("MainTask: "+ lista);
-		console.log("Lista: "+ lista[0]);
+		
+		console.log("Lista: "+ lista);
 	};
 	
 	const [selectedFile, setSelectedFile] = useState(null)
