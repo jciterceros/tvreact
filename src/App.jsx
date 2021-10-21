@@ -67,7 +67,12 @@ const App = () => {
       reader.readAsDataURL(files[0])
 
       reader.onload = (e) => {
-          setSelectedFile(e.target.result)
+        //const arquivo = e.target.result
+        //console.log(lista);
+        console.log(files[0]);
+        //console.log("Arquivo Seleciona: " + arquivo)
+        setSelectedFile(e.target.result)
+        //setSelectedFile(arquivo)
       }
   }
 

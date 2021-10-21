@@ -17,12 +17,14 @@ const AddTask = ({ handleTaskAddition }) => {
 
 	const handleAddTaskClick = () => {
 		handleTaskAddition(inputData);
-		lista.concat({id:cont,nome:'video'+cont+'.mp4',tempo:10})
-		cont+=1;
+		//lista[cont].concat({id:cont,nome:'video'+cont+'.mp4',tempo:10})
+		//cont+=1;
+		//lista.push(inputData);
+		//cont++;
+		//console.log("Botao Adicionar handleAddTaskClick: " + lista);
 		setInputData("");
 		//console.log("MainTask: "+ lista);
 		
-		console.log("Lista: "+ lista);
 	};
 	
 	const [selectedFile, setSelectedFile] = useState(null)
